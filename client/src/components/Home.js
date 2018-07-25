@@ -31,11 +31,12 @@ class Home extends React.Component {
 
   render() {
     return (
-        <Container style={{ display: 'flex',
+        <Container style={{ 
+                            display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            flexDirection: 'column', }}
-                            fluid>
+                            flexDirection: 'column', 
+                         }} fluid>
             <Image src={MyGuy} as={Rotate} style={{ padding: '50px'}} circular />  
             <Header as={HeaderStyle}>Who's Your Guy?</Header>
         </Container>

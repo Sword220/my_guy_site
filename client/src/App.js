@@ -12,8 +12,9 @@ import NoMatch from './components/NoMatch'
 
 const Main = styled.div`
   height: 100vh;
-  background: black;;
+  background: black;
   color: white !important;
+  font-family: Verdana, Geneva, sans-serif !important;
 `
 
 //TODO add footer with email, fackebook, and phone
