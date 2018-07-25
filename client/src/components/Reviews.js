@@ -32,7 +32,7 @@ class Reviews extends React.Component {
               <div>
                 {reviews.map ( r => 
                 <div style={{ padding: '20px' }}>
-                  <Header style={{ color: 'white' }} as='h3'>{r.name}</Header>
+                  <Header key={r.id} style={{ color: 'white' }} as='h3'>{r.name}</Header>
                   <Rating icon='star' size='tiny' defaultRating={5} maxRating={5} />
                   <Divider />
                     <p>{r.body}</p>

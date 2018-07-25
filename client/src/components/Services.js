@@ -31,7 +31,7 @@ class Services extends React.Component {
         </Header>
         <Divider />
         <Grid>
-          <Grid.Column width={8} style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column', padding: '50px' }}>
+          <Grid.Column width={8} style={{ display: 'flex', justifyContent: 'space-evenly', flexDirection: 'column', flexGrow: '2', padding: '50px' }}>
               { services.map( s =>
                 <List key={s.id} >
                   <List.Item>

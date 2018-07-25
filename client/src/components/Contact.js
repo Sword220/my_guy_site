@@ -1,5 +1,11 @@
 import React from 'react'
-import { Header, Container } from 'semantic-ui-react'
+import { 
+  Header, 
+  Container,
+  Form,
+  Input,
+  Button,
+} from 'semantic-ui-react'
 import styled from 'styled-components'
 
 const Main = styled.div`
@@ -22,6 +28,9 @@ class Contact extends React.Component {
           <p>
             myguydrainsolutions@gmail.com
           </p>
+          <Form>
+            <Input  />
+          </Form>
         </Container>
       </Main>
     )

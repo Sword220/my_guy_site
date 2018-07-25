@@ -18,7 +18,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <Container fluid>
-        <Menu style={{ fontSize: '20px', display: 'flex', justifyContent: 'space-around', border: 'bottom solid grey 1px' }} fluid pointing secondary>
+        <Menu style={{ fontSize: '20px', display: 'flex', justifyContent: 'space-evenly', border: 'bottom solid grey 1px' }} fluid pointing secondary>
           <Link to='/'>
             <Menu.Item style={{ color: 'white' }} name='Home' />
           </Link>

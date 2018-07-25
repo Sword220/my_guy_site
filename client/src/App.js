@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import NavBar from './components/NavBar'
@@ -25,7 +25,7 @@ class App extends React.Component {
   render() {
     return (
       <Main>
-        <div>
+        <Fragment>
           <NavBar />
           <Switch>
             <Route exact path='/' component={Home} />
@@ -35,7 +35,7 @@ class App extends React.Component {
             <Route exact path='/reviews' component={Reviews} />
             <Route component={NoMatch} />
           </Switch>
-        </div>
+        </Fragment>
       </Main>
     )
   }
