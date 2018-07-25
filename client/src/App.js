@@ -1,6 +1,11 @@
 import React, { Fragment } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import styled from 'styled-components'
+import {
+  Menu,
+  Responsive,
+  Button,
+} from 'semantic-ui-react'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import About from './components/AboutUs'
@@ -16,17 +21,28 @@ const Main = styled.div`
   color: white !important;
   font-family: Verdana, Geneva, sans-serif !important;
 `
-
-//TODO add footer with email, fackebook, and phone
+//TODO handleClick function
+//TODO add footer with email, facebook, and phone
 //TODO add word cloud for background image
 
-
 class App extends React.Component {
+  state = { showMobile: false }
+  
+  handleClick = () => {
+    
+  }
+  
   render() {
+    const { shoMobile } = this.state
     return (
       <Main>
         <Fragment>
-          <NavBar />
+          <Responsive minWidth={768}>
+            <NavBar />
+          </Responsive>
+          <Responsive maxWidth={768}>
+              <Button inverted color='black' onClick={this.handleClick}>Menu</Button>
+          </Responsive>
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/about' component={About} />

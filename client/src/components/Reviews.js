@@ -23,7 +23,7 @@ class Reviews extends React.Component {
 
     return(
       <Container fluid style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', color: 'white', padding: '50px' }}>
-        <Header style={{ color: 'white' }} as='h1' textAlign='center'>
+        <Header style={{ color: 'white', size: '50px' }} as='h1' textAlign='center'>
           Reviews
         </Header>
         <Container fluid>
