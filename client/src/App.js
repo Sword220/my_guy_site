@@ -13,7 +13,6 @@ import Contact from './components/Contact'
 import Services from './components/Services'
 import Reviews from './components/Reviews'
 import NoMatch from './components/NoMatch'
-//import WordCloud from '../images/MyGuy_Background.jpg'
 
 const Main = styled.div`
   height: 100vh;
@@ -26,23 +25,21 @@ const Main = styled.div`
 //TODO add word cloud for background image
 
 class App extends React.Component {
-  state = { showMobile: false }
   
   handleClick = () => {
-    
+    return(
+      <Menu pointing secondary vertical>
+        <Menu.Item style={{ color: 'white' }} name="Home" />
+      </Menu> 
+    )     
   }
   
+  
   render() {
-    const { shoMobile } = this.state
     return (
       <Main>
         <Fragment>
-          <Responsive minWidth={768}>
-            <NavBar />
-          </Responsive>
-          <Responsive maxWidth={768}>
-              <Button inverted color='black' onClick={this.handleClick}>Menu</Button>
-          </Responsive>
+          <NavBar />
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/about' component={About} />

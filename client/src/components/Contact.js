@@ -1,12 +1,16 @@
 import React from 'react'
+import axios from 'axios'
 import { 
   Header, 
   Container,
   Form,
   Input,
   Button,
+  Label,
+  TextArea,
+  Message,
 } from 'semantic-ui-react'
-import styled from 'styled-components'
+import styled, { flex } from 'styled-components'
 
 const Main = styled.div`
   height: 100vh;
@@ -14,7 +18,25 @@ const Main = styled.div`
 `
 
 class Contact extends React.Component {
+
+  state = { name: '', email: '', phone: '', body: '' }
+
+  handleChange = (e) => {
+  const { name, value } = e.target
+  this.setState({ [name]: value })
+  }
+
+  handleSubmit = (e) => {
+  e.preventDefault()
+  axios.post('/api/contacts', this.state)
+    .then( res => {
+      alert('Your message has been sent')
+      this.setState({ name: '', email: '', phone: '', body: '' })
+    })
+  }
+
   render() {
+    const { name, email, phone, body } = this.state
     return(
       <Main>
         <Header style={{ color: 'white' }} as='h1' textAlign='center'>Contact Us</Header>
@@ -28,13 +50,47 @@ class Contact extends React.Component {
           <p>
             myguydrainsolutions@gmail.com
           </p>
-          <Form>
-            <Input  />
-          </Form>
-        </Container>
+          </Container>
+          <Container style={{ width: '800px', padding: '30px', display: 'flex', justifyContent: 'center' }}>
+            {/* <Form success style={{ height: '50vh', display: 'flex', justifyContent: 'center', flexDirection: 'column' }}> */}
+            <Form style={{ width: '600px', display: 'flex', justifyContent: 'space-around', flexDirection: 'column' }} onSubmit={this.handleSubmit}>
+              <Form.Input
+                required
+                placeholder="Name"
+                name="name"
+                value={name}
+                onChange={this.handleChange}
+              />
+              <Form.Input
+                required
+                placeholder="Email"
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+              />
+              <Form.Input
+                placeholder="Phone"
+                name="phone"
+                value={phone}
+                onChange={this.handleChange}
+              />
+              <Form.TextArea 
+                style={{ height: '100px' }}
+                required
+                name="body"
+                value={body} 
+                onChange={this.handleChange}
+              >
+              </Form.TextArea>
+              <Button inverted color='black' style={{ width: '100px'}}onClick={this.handleSubmit} >
+                Send email
+              </Button>
+            </Form>
+            </Container>
       </Main>
     )
   }
 } 
+
 
 export default Contact

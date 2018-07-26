@@ -6,7 +6,7 @@ class NoMatch extends React.Component {
   render() {
     return(
       <Header as='h1' textAlign='center'>
-        No Route Match Return <Link to='/'>Home</Link>
+        Route Not Found <Link to='/'>Home</Link>
       </Header>
     )
   }
