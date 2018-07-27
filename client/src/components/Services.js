@@ -3,11 +3,11 @@ import axios from 'axios'
 import { 
   Header, 
   List, 
-  Container,
+  //Container,
   Divider,
   Grid,
 } from 'semantic-ui-react';
-import style from 'styled-components'
+//import style from 'styled-components'
 
 //TODO add thumbs up my guy to left
 //TODO on mouse hover of li toggle from my guy to before/after

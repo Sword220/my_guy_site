@@ -3,10 +3,8 @@ import {
   Header, 
   Container, 
   Image, 
-  Grid,
-  Menu,
 } from 'semantic-ui-react';
-import styled, { keyframes, flex } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import MyGuy from '../images/MyGuyDrainLogo.jpg'
 
 const rotate360 = keyframes`
@@ -31,14 +29,9 @@ class Home extends React.Component {
 
   render() {
     return (
-        <Container style={{ 
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            flexDirection: 'column', 
-                         }} fluid>
-            <Image src={MyGuy} as={Rotate} style={{ padding: '50px'}} circular />  
-            <Header as={HeaderStyle}>Who's Your Guy?</Header>
+        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
+          <Image src={MyGuy} as={Rotate} style={{ padding: '80px'}} circular />  
+          <Header as={HeaderStyle}>Who's Your Guy?</Header>
         </Container>
     );
   }

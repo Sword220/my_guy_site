@@ -1,5 +1,9 @@
 import React from 'react'
-import { Header, Container } from 'semantic-ui-react'
+import { 
+  Header, 
+  Container,
+  Divider,
+} from 'semantic-ui-react'
 import styled from 'styled-components'
 
 const Main = styled.div`
@@ -14,11 +18,9 @@ class About extends React.Component {
   render() {
     return(
       <Main>
-        <Header style={{ color: 'white' }} as='h1' textAlign='center'>About Us</Header>
-        <Container style={{ display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            flexDirection: 'flex-end', }}>
+        <Header style={{ color: 'white', padding: '40px 0px 0px 0px' }} as='h1' textAlign='center'>About Us</Header>
+        <Divider />
+        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'flex-end', }}>
           My Guy Drain Solutions is an owner operated company based around helping others. <br />
           Our customer service is second to none. We are in the people business, but we can fix your drain too!<br /> 
           We never up sale or offer solutions that don’t fit your wants and needs. With almost two decades of experience,<br /> 
