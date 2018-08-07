@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import axios from 'axios'
 import { 
   Header, 
@@ -40,26 +40,12 @@ class Contact extends React.Component {
   render() {
     const { name, email, phone, body } = this.state
     return(
-      <Main>
+      <Fragment>
       <Header style={{ color: 'white', padding: '40px 0px 0px 0px' }} as='h1' textAlign='center'>
-        Contact Us
+        <p>Phone: 385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
       </Header>
-      <Divider />
         <Grid>
-          <Grid.Column style={{ display: 'flex', justifyContent: 'stretch', flexDirection: 'column'}} width={8} floated='left'>
-            <Container style={{ padding: '125px 0px 0px 100px'}}fluid>
-              <p>
-                385-264-3353
-              </p>
-              <p>
-                2621 N 1300 E, North Ogden, UT 84414
-              </p>
-              <p>
-                myguydrainsolutions@gmail.com
-              </p>
-            </Container>
-          </Grid.Column>
-          <Grid.Column width={8} floated='right'>
+          <Grid.Column width={16}>
             <Container style={{ width: '800px', padding: '30px', display: 'flex', justifyContent: 'center' }} fluid>
               <Form style={{ width: '600px', display: 'flex', justifyContent: 'space-around', flexDirection: 'column', padding: '40px 0px 0px 0px' }} onSubmit={this.handleSubmit}>
                 <Form.Input
@@ -90,14 +76,14 @@ class Contact extends React.Component {
                   onChange={this.handleChange}
                 >
                 </Form.TextArea>
-                  <Button inverted color='black' style={{ width: '100px'}} onClick={this.handleSubmit} >
+                  <Button inverted color='black' style={{ width: '100px' }} onClick={this.handleSubmit} >
                     Send email
                   </Button>
-                </Form>
-              </Container>
-            </Grid.Column>
-          </Grid>
-      </Main>
+              </Form>
+            </Container>
+          </Grid.Column>
+        </Grid>
+      </Fragment>
     )
   }
 } 

@@ -3,14 +3,11 @@ import axios from 'axios'
 import { 
   Header, 
   List, 
-  //Container,
+  Container,
   Divider,
   Grid,
 } from 'semantic-ui-react';
-//import style from 'styled-components'
-
-//TODO add thumbs up my guy to left
-//TODO on mouse hover of li toggle from my guy to before/after
+import InfiniteScroll from 'react-infinite-scroller'
 
 class Services extends React.Component {
   state = { services: [] }
@@ -25,27 +22,32 @@ class Services extends React.Component {
   render() {
     const { services } = this.state
     return(
-      <Fragment>
-        <Header style={{ color: 'white', padding: '40px 0px 0px 0px' }}as='h1' textAlign='center'>
-          Services
-        </Header>
-        <Divider />
-        <Grid>
-          <Grid.Column width={8} style={{ display: 'flex', justifyContent: 'space-evenly', flexDirection: 'column', flexGrow: '2', padding: '50px' }}>
-              { services.map( s =>
-                <List key={s.id} >
-                  <List.Item>
-                    {s.name}
-                  </List.Item>
-                </List>
-                )
-              }
-          </Grid.Column>
-          <Grid.Column width={8} style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', }}>
-              pics and stuff
-          </Grid.Column>
-        </Grid>
-      </Fragment>
+      <Grid>
+      <Grid.Column width={16} float='left'>
+        <Container fluid style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', color: 'white', padding: '50px' }}>
+          <Header style={{ color: 'white' }} as='h1' textAlign='center'>
+            Services
+          </Header>
+          <Container fluid>
+            <div style={{ display: 'flex', justifyContent: 'center', background: 'black', height: '500px', overflow: 'auto', border: '2px solid grey' }}>
+              <InfiniteScroll hasMore={false} pageStart={0}>
+                <div>
+                  {services.map ( s => 
+                  <div style={{ padding: '20px' }}>
+                    <Header key={s.id} style={{ color: 'white' }} as='h3'>{s.name}</Header>
+                    <Divider />
+                      <p>{s.body}</p>
+                    <hr />
+                  </div>
+                  )}
+                  <p></p>
+                </div>
+              </InfiniteScroll>
+            </div>
+          </Container>
+        </Container>
+      </Grid.Column>
+    </Grid>
     )
   }
 } 

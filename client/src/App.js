@@ -8,24 +8,18 @@ import Contact from './components/Contact'
 import Services from './components/Services'
 import Reviews from './components/Reviews'
 import NoMatch from './components/NoMatch'
+import Img from './images/MyGuy_Background.jpg'
 
 const Main = styled.div`
   height: 100vh;
-  background: black;
+  background-image: url(${Img});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
   color: white !important;
   font-family: Verdana, Geneva, sans-serif !important;
   `
-  
-  // const MainHeader = styled.div`
-  // display: flex;
-  // background-image: url('./images/MyGuy_Background.jpg')
-  // background-repeat: no-repeat;
-  // background-position: center bottom;
-  // background-size: cover;
-  // width: 100%;
-  // height: 100%;
-  // justify-content: center;
-  // `
 
 //TODO add footer with email, facebook, and phone
 //TODO add word cloud for background image

@@ -1,25 +1,18 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { 
   Header, 
   Container,
   Divider,
+  Image,
 } from 'semantic-ui-react'
-import styled from 'styled-components'
-
-const Main = styled.div`
-  height: 100vh;
-  background: black;
-  color: white;
-  text-align: center;
-`
+import ThumbsUp from '../images/Caricature.jpg'
 
 class About extends React.Component {
 
   render() {
     return(
-      <Main>
+      <Fragment>
         <Header style={{ color: 'white', padding: '40px 0px 0px 0px' }} as='h1' textAlign='center'>About Us</Header>
-        <Divider />
         <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'flex-end', }}>
           My Guy Drain Solutions is an owner operated company based around helping others. <br />
           Our customer service is second to none. We are in the people business, but we can fix your drain too!<br /> 
@@ -28,7 +21,8 @@ class About extends React.Component {
           opportunity to show you how our “help first” attitude can turn a stressful situation into an enjoyable experience.<br />
           We look forward to being your guy!
         </Container>
-      </Main>
+        <Image src={ThumbsUp} />
+      </Fragment>
     )
   }
 }

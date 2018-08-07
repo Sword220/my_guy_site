@@ -23,18 +23,40 @@ const Rotate = styled.div`
 const HeaderStyle = styled.h1`
   text-align: center;
   color: white !important;
+  margin: 40px 0px 0px 0px;
 `
 
+
 class Home extends React.Component {
+
+  imageClick = () => {
+    console.log('click!')
+  }
 
   render() {
     return (
         <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
-          <Image src={MyGuy} as={Rotate} style={{ padding: '80px'}} circular />  
           <Header as={HeaderStyle}>Who's Your Guy?</Header>
+          <Image src={MyGuy} as={Rotate} style={{ padding: '60px'}} circular pointing secondary onClick={this.imageClick} />  
         </Container>
     );
   }
 }
 
 export default Home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

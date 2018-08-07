@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom'
 import { 
   Menu, 
   Container,
-  //Header,
   Responsive,
   Button,
   Icon,
 } from 'semantic-ui-react'
-//import styled from 'styled-components'
+import styled from 'styled-components'
 
-// const Nav = styled.div`
-//   background-color: black;
-//   color: white !important;
-//   height: 15vh;
-// `
+const Nav = styled.div`
+  background-color: black;
+  color: white !important;
+  display: flex;
+  justify-content: stretch;
+`
 
 class NavBar extends React.Component {
   state = { showMenu: false }
@@ -49,7 +49,8 @@ class NavBar extends React.Component {
   }
 
   render() {
-    return (
+    return(
+      <Nav>
       <Fragment>
         <Container fluid>
           <Responsive minWidth={768}>
@@ -84,6 +85,7 @@ class NavBar extends React.Component {
            </Container>
         </Responsive>
       </Fragment>
+      </Nav>
     );
   }
 }
