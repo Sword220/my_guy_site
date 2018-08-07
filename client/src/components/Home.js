@@ -6,6 +6,7 @@ import {
 } from 'semantic-ui-react';
 import styled, { keyframes } from 'styled-components'
 import MyGuy from '../images/MyGuyDrainLogo.jpg'
+import Footer from './Footer'
 
 const rotate360 = keyframes`
   from {
@@ -36,8 +37,9 @@ class Home extends React.Component {
   render() {
     return (
         <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
-          <Header as={HeaderStyle}>Who's Your Guy?</Header>
-          <Image src={MyGuy} as={Rotate} style={{ padding: '60px'}} circular pointing secondary onClick={this.imageClick} />  
+          <Header as={HeaderStyle} style={{ padding: '40px 0px 0px 0px' }}>Who's Your Guy?</Header>
+          <Image src={MyGuy} as={Rotate} style={{ padding: '60px'}} circular pointing secondary onClick={this.imageClick} /> 
+          <Footer /> 
         </Container>
     );
   }

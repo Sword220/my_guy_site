@@ -4,20 +4,10 @@ import {
   Header, 
   Container,
   Form,
-  Input,
   Button,
-  Label,
-  TextArea,
-  Message,
   Grid,
-  Divider,
 } from 'semantic-ui-react'
-import styled, { flex } from 'styled-components'
-
-const Main = styled.div`
-  height: 100vh;
-  background: black;
-`
+import Footer from './Footer'
 
 class Contact extends React.Component {
 
@@ -83,6 +73,7 @@ class Contact extends React.Component {
             </Container>
           </Grid.Column>
         </Grid>
+        <Footer />
       </Fragment>
     )
   }

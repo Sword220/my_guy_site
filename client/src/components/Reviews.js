@@ -1,13 +1,11 @@
 import React from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 import {
   Container,
   Header,
   Rating,
   Divider,
   Button,
-  Form,
   Grid,
   Icon,
 } from 'semantic-ui-react'
@@ -25,11 +23,11 @@ class Reviews extends React.Component {
   }
   
   render() {
-    const { reviews, name, body } = this.state
+    const { reviews } = this.state
 
     return(
       <Grid>
-        <Grid.Column width={16} float='left'>
+        <Grid.Column width={16}>
           <Container fluid style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', color: 'white', padding: '50px' }}>
             <Header style={{ color: 'white' }} as='h1' textAlign='center'>
               Reviews

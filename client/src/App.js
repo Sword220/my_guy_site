@@ -22,7 +22,6 @@ const Main = styled.div`
   `
 
 //TODO add footer with email, facebook, and phone
-//TODO add word cloud for background image
 
 class App extends React.Component {
   
