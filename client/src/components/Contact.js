@@ -73,7 +73,6 @@ class Contact extends React.Component {
             </Container>
           </Grid.Column>
         </Grid>
-        <Footer />
       </Fragment>
     )
   }

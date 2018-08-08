@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { 
   Header, 
   Container, 
@@ -36,11 +36,15 @@ class Home extends React.Component {
 
   render() {
     return (
+      <Fragment>
         <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
           <Header as={HeaderStyle} style={{ padding: '40px 0px 0px 0px' }}>Who's Your Guy?</Header>
           <Image src={MyGuy} as={Rotate} style={{ padding: '60px'}} circular pointing secondary onClick={this.imageClick} /> 
-          <Footer /> 
         </Container>
+        <Container>
+        <Footer /> 
+        </Container>
+      </Fragment>
     );
   }
 }

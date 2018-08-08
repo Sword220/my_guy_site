@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import { 
   Header, 
   Container,
-  Divider,
   Image,
   Grid,
 } from 'semantic-ui-react'
@@ -17,7 +16,7 @@ class About extends React.Component {
         <Header style={{ color: 'white', padding: '40px 0px 0px 0px' }} as='h1' textAlign='center'>About Us</Header>
         <Grid>
           <Grid.Column width={8} floated='left'>
-            <Image src={ThumbsUp} style={{ display: 'flex', justifyContent: 'center', margin: '30px 0px 200px 75px', height: '500px', width: '400px' }}/>
+            <Image src={ThumbsUp} style={{ display: 'flex', justifyContent: 'center', padding: '30px 0px 0px 75px', height: '500px', width: '400px' }}/>
           </Grid.Column>
           <Grid.Column width={8} floated='right'>
             <Container as='h2' style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', padding: '60px 200px 0px 0px' }} fluid >
@@ -30,6 +29,7 @@ class About extends React.Component {
             </Container>
           </Grid.Column>
         </Grid>
+        <Footer />
       </Fragment>
     )
   }

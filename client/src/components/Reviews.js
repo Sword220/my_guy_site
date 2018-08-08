@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import axios from 'axios'
 import {
   Container,
@@ -10,6 +10,7 @@ import {
   Icon,
 } from 'semantic-ui-react'
 import InfiniteScroll from 'react-infinite-scroller'
+import Footer from './Footer'
 
 class Reviews extends React.Component {
   state = { reviews : [], name: '', body: '' }
@@ -26,6 +27,7 @@ class Reviews extends React.Component {
     const { reviews } = this.state
 
     return(
+      <Fragment>
       <Grid>
         <Grid.Column width={16}>
           <Container fluid style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', color: 'white', padding: '50px' }}>
@@ -37,8 +39,8 @@ class Reviews extends React.Component {
                 <InfiniteScroll hasMore={false} pageStart={0}>
                   <div>
                     {reviews.map ( r => 
-                    <div style={{ padding: '20px' }}>
-                      <Header key={r.id} style={{ color: 'white' }} as='h3'>{r.name}</Header>
+                    <div key={r.id} style={{ padding: '20px' }}>
+                      <Header style={{ color: 'white' }} as='h3'>{r.name}</Header>
                       <Rating icon='star' size='tiny' defaultRating={5} maxRating={5} />
                       <Divider />
                         <p>{r.body}</p>
@@ -49,13 +51,14 @@ class Reviews extends React.Component {
                   </div>
                 </InfiniteScroll>
               </div>
-            </Container>
+              </Container>
               <Button style={{ padding: '15px', margin: '10px' }} color='facebook' href='https://www.facebook.com/pg/cameron801/reviews/?ref=page_internal' >
-                <Icon name='facebook' /> Facebook
+                <Icon name='facebook' /> Leave a Review on Facebook
               </Button>
           </Container>
         </Grid.Column>
       </Grid>
+      </Fragment>
     )
   }
 
