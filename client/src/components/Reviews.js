@@ -10,7 +10,6 @@ import {
   Icon,
 } from 'semantic-ui-react'
 import InfiniteScroll from 'react-infinite-scroller'
-import Footer from './Footer'
 
 class Reviews extends React.Component {
   state = { reviews : [], name: '', body: '' }

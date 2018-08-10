@@ -5,7 +5,6 @@ import {
   Container,
   Divider,
   Grid,
-  Button,
 } from 'semantic-ui-react';
 import InfiniteScroll from 'react-infinite-scroller'
 import Footer from './Footer'
@@ -38,7 +37,7 @@ class Services extends React.Component {
                     <div key={s.id} style={{ padding: '20px' }}>
                       <Header style={{ color: 'white' }} as='h3'>{s.name}</Header>
                       <Divider />
-                        <p>{s.body}</p>
+                        <p>{s.description}</p>
                       <hr />
                     </div>
                     )}

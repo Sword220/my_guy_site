@@ -87,15 +87,45 @@ Review.create([
 ])
 
 Service.create([
-  { name: 'Kitchen Sink' },
-  { name: 'Bathroom Sink' },
-  { name: 'Bathtub' },
-  { name: 'Toilet' },
-  { name: 'Urinal' },
-  { name: 'Washer Line' },
-  { name: 'Floor Drain' },
-  { name: 'Main Sewer' },
-  { name: 'Jetter' },
-  { name: 'Camera/Scope' },
+  { 
+    name: 'Kitchen Sink', 
+    description: 'Are you experienceing water flowing from one side of your sink to the other, or have stinky food smells coming 
+    from your sink?
+    My Guy has a solution!' 
+  },
+  { 
+    name: 'Bathroom Sink', 
+    description:  'Does your sink fill u after you wash your hands, brush your teeth, or just not draining at all?
+    My Guy has a solution!'
+  },
+  { 
+    name: 'Bathtub', 
+    description:  'Are you taking a shower that turns into an ankle-deep bath?  Does it take your bathtub sereal minutes to drain?
+    My Guy has a solution!'
+  },
+  { 
+    name: 'Toilet', 
+    description:  'Do you have to flush more than once or jiggle the handle that certain way?  Is your plunger getting more 
+    use than normal?
+    My Guy has a solution!'
+  },
+  { 
+    name: 'Washer Line', 
+    description:  'Does your washing machine overflow when it begins the spin cycle?  Do you have water coming up from your floor drain
+    or nearby sink?
+    My Guy has a solution!'
+  },
+  { 
+    name: 'Floor Drain', 
+    description:  'Take a pitcher of water and test your floor drains.  If you are experiencing pooling or if it drains slow.
+    My Guy has a solution!'
+  },
+  { 
+    name: 'Main Sewer', 
+    description:  'Do you have a stinky smell coming from any of your drains, hear gurgling in your toilets, or finding puddles of 
+    water by your floor drains?
+    My Guy has a solution!
+    * Defective floor drains could cause thousands of dollars in repairs to your home.  Don'"'t wait until it'"'s too late.'
+  },
 ])
 

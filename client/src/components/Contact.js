@@ -7,7 +7,6 @@ import {
   Button,
   Grid,
 } from 'semantic-ui-react'
-import Footer from './Footer'
 
 class Contact extends React.Component {
 

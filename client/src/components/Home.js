@@ -18,7 +18,7 @@ const rotate360 = keyframes`
 `
 
 const Rotate = styled.div`
-  animation: ${rotate360} 30s linear infinite;
+  animation: ${rotate360} 30s linear;
 `
 
 const HeaderStyle = styled.h1`
@@ -31,7 +31,9 @@ const HeaderStyle = styled.h1`
 class Home extends React.Component {
 
   imageClick = () => {
-    console.log('click!')
+    return(
+      <div></div>
+    )
   }
 
   render() {
@@ -39,7 +41,9 @@ class Home extends React.Component {
       <Fragment>
         <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
           <Header as={HeaderStyle} style={{ padding: '40px 0px 0px 0px' }}>Who's Your Guy?</Header>
-          <Image src={MyGuy} as={Rotate} style={{ padding: '60px'}} circular pointing secondary onClick={this.imageClick} /> 
+          <Rotate>
+            <Image src={MyGuy} style={{ padding: '60px' }} circular pointing='true' secondary='true' onClick={this.imageClick} /> 
+          </Rotate>
         </Container>
         <Container>
         <Footer /> 

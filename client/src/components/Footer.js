@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Container,
   Menu,
-  Button,
   Icon,
 } from 'semantic-ui-react'
 import styled from 'styled-components'
@@ -24,10 +23,7 @@ class Footer extends React.Component {
           <Menu style={{ fontSize: '15px', display: 'flex', justifyContent: 'space-evenly' }} fluid pointing secondary>
             <Menu.Item style={{ color: 'white' }} name='385-264-3353' />
             <Menu.Item style={{ color: 'white' }} name='myguydrainsolutions@gmail.com' />
-            <Button color='facebook' style={{ height: '50px', width: '50px'}}>
-              <Icon name='facebook' />
-              <Menu.Item href='https://www.facebook.com/pg/cameron801/' style={{ color: 'white' }} />
-            </Button>
+            <Menu.Item href='https://www.facebook.com/pg/cameron801/' style={{ color: 'white' }} name='facebook.com/myguy'/>
           </Menu>
         </Container>
       </FooterStyle>
