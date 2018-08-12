@@ -11,7 +11,15 @@ import Footer from './Footer'
 
 class Contact extends React.Component {
 
-  state = { name: '', email: '', phone: '', body: '' }
+  state = { 
+    name: '', 
+    email: '', 
+    phone: '', 
+    body: '',
+    nameError: false,
+    emailError: false,
+    bodyError: false,
+  }
 
   handleChange = (e) => {
   const { name, value } = e.target
@@ -20,6 +28,15 @@ class Contact extends React.Component {
 
   handleSubmit = (e) => {
   e.preventDefault()
+  //add validation and errors here
+  let error = false
+  if (this.state.email === '') {
+    this.setState({ emailError: true })
+    error = true
+  } else {
+    this.setState({ emailError: false })
+    error = false
+  }
   axios.post('/api/contacts', this.state)
     .then( res => {
       alert('Your message has been sent')
@@ -28,7 +45,7 @@ class Contact extends React.Component {
   }
 
   render() {
-    const { name, email, phone, body } = this.state
+    const { name, email, phone, body, nameError } = this.state
     return(
       <Fragment>
       <Header style={{ color: 'white', padding: '40px 0px 0px 0px' }} as='h1' textAlign='center' >
@@ -43,6 +60,7 @@ class Contact extends React.Component {
                   placeholder="Name"
                   name="name"
                   value={name}
+                  error={nameError}
                   onChange={this.handleChange}
                 />
                 <Form.Input
@@ -66,7 +84,17 @@ class Contact extends React.Component {
                   onChange={this.handleChange}
                 >
                 </Form.TextArea>
-                  <Form.Button inverted color='black' style={{ width: '100px' }} onClick={this.handleSubmit} floated='right'>
+                  <Form.Button 
+                    inverted 
+                    color='black' 
+                    style={{ width: '100px' }} 
+                    onClick={this.handleSubmit} 
+                    floated='right'
+                    disabled = {
+                      !this.state.name ||
+                      !this.state.email ||
+                      !this.state.body
+                    }>
                     Send email
                   </Form.Button>
               </Form>
