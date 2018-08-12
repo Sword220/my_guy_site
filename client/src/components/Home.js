@@ -29,11 +29,19 @@ const HeaderStyle = styled.h1`
 
 
 class Home extends React.Component {
+  state = { imageSpin: false }
 
   imageClick = () => {
-    return(
-      <div></div>
-    )
+    this.setState({ imageSpin: !this.state.ImageSpin })
+  }
+
+  fastSpin = () => {
+    const { imageSpin } = this.state
+    if(imageSpin){
+      return(
+        <Image src={MyGuy} style={{ padding: '60px' }} circular pointing='true' secondary='true' />
+      )
+    }
   }
 
   render() {
@@ -41,9 +49,7 @@ class Home extends React.Component {
       <Fragment>
         <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
           <Header as={HeaderStyle} style={{ padding: '40px 0px 0px 0px' }}>Who's Your Guy?</Header>
-          <Rotate>
-            <Image src={MyGuy} style={{ padding: '60px' }} circular pointing='true' secondary='true' onClick={this.imageClick} /> 
-          </Rotate>
+            <Image src={MyGuy} as={Rotate} style={{ padding: '60px' }} circular pointing='true' secondary='true' onClick={this.imageClick} /> 
         </Container>
         <Container>
         <Footer /> 

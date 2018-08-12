@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+ruby encoding: utf-8
 Review.create([
   {
     name: 'Cole Larsen',
@@ -124,8 +125,7 @@ Service.create([
     name: 'Main Sewer', 
     description:  'Do you have a stinky smell coming from any of your drains, hear gurgling in your toilets, or finding puddles of 
     water by your floor drains?
-    My Guy has a solution!
-    * Defective floor drains could cause thousands of dollars in repairs to your home.  Don'"'t wait until it'"'s too late.'
+    My Guy has a solution! Defective floor drains could cause thousands of dollars in repairs to your home.  Don'"'t wait until it'"'s too late.'
   },
 ])
 

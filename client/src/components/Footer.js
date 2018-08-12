@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   Container,
   Menu,
@@ -21,9 +22,11 @@ class Footer extends React.Component {
       <FooterStyle>
         <Container fluid>
           <Menu style={{ fontSize: '15px', display: 'flex', justifyContent: 'space-evenly' }} fluid pointing secondary>
-            <Menu.Item style={{ color: 'white' }} name='385-264-3353' />
-            <Menu.Item style={{ color: 'white' }} name='myguydrainsolutions@gmail.com' />
-            <Menu.Item href='https://www.facebook.com/pg/cameron801/' style={{ color: 'white' }} name='facebook.com/myguy'/>
+            <Menu.Item style={{ color: 'white' }} name='385-264-3353' content='385-264-3353' />
+            <Link to ='/contact'>
+              <Menu.Item style={{ color: 'white' }} name='myguydrainsolutions@gmail.com' content='myguydrainsolutions@gmail.com' />
+            </Link>
+            <Menu.Item href='https://www.facebook.com/pg/cameron801/' style={{ color: 'white' }} name='facebook.com/myguy' content='facebook.com/myguy' />
           </Menu>
         </Container>
       </FooterStyle>

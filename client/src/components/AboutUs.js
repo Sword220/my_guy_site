@@ -14,7 +14,7 @@ class About extends React.Component {
     return(
       <Fragment>
         <Header style={{ color: 'white', padding: '40px 0px 0px 0px' }} as='h1' textAlign='center'>About Us</Header>
-        <Grid>
+        <Grid columm={2}>
           <Grid.Column width={8} floated='left'>
             <Image src={ThumbsUp} style={{ display: 'flex', justifyContent: 'center', padding: '30px 0px 0px 75px', height: '500px', width: '400px' }}/>
           </Grid.Column>

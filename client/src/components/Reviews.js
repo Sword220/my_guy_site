@@ -12,7 +12,7 @@ import {
 import InfiniteScroll from 'react-infinite-scroller'
 
 class Reviews extends React.Component {
-  state = { reviews : [], name: '', body: '' }
+  state = { reviews : [], name: '', body: '', moreReviews: false }
 
   componentDidMount() {
     axios.get('/api/reviews')
@@ -20,6 +20,10 @@ class Reviews extends React.Component {
         this.setState({ reviews: res.data })
       }
     )
+  }
+
+  loadReviews = () => {
+    this.setState({ moreReviews: this.state.moreReviews })
   }
   
   render() {
@@ -35,7 +39,7 @@ class Reviews extends React.Component {
             </Header>
             <Container fluid>
               <div style={{ display: 'flex', justifyContent: 'center', background: 'black', height: '500px', overflow: 'auto', border: '2px solid grey' }}>
-                <InfiniteScroll hasMore={false} pageStart={0}>
+                <InfiniteScroll hasMore={false} loadMore={() => this.loadReviews()} pageStart={0}>
                   <div>
                     {reviews.map ( r => 
                     <div key={r.id} style={{ padding: '20px' }}>

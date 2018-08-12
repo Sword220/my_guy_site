@@ -21,8 +21,6 @@ const Main = styled.div`
   font-family: Verdana, Geneva, sans-serif !important;
   `
 
-//TODO add footer with email, facebook, and phone
-
 class App extends React.Component {
   
   render() {

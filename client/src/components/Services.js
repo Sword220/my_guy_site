@@ -10,13 +10,17 @@ import InfiniteScroll from 'react-infinite-scroller'
 import Footer from './Footer'
 
 class Services extends React.Component {
-  state = { services: [] }
+  state = { services: [], moreServices: false }
 
   componentDidMount() {
     axios.get('/api/services')
       .then( res => {
         this.setState({ services: res.data })
       })
+  }
+
+  handleLoad = () => {
+    this.state({ moreServices: this.state.moreServices })
   }
 
   render() {
@@ -31,7 +35,7 @@ class Services extends React.Component {
             </Header>
             <Container fluid>
               <div style={{ display: 'flex', justifyContent: 'center', background: 'black', height: '500px', overflow: 'auto', border: '2px solid grey' }}>
-                <InfiniteScroll hasMore={false} pageStart={0}>
+                <InfiniteScroll hasMore={false} loadMore={() => this.handleLoad()} pageStart={0}>
                   <div>
                     {services.map ( s => 
                     <div key={s.id} style={{ padding: '20px' }}>

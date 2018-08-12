@@ -7,6 +7,7 @@ import {
   Button,
   Grid,
 } from 'semantic-ui-react'
+import Footer from './Footer'
 
 class Contact extends React.Component {
 
@@ -30,8 +31,8 @@ class Contact extends React.Component {
     const { name, email, phone, body } = this.state
     return(
       <Fragment>
-      <Header style={{ color: 'white', padding: '40px 0px 0px 0px' }} as='h1' textAlign='center'>
-        <p>Phone: 385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
+      <Header style={{ color: 'white', padding: '40px 0px 0px 0px' }} as='h1' textAlign='center' >
+        <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
       </Header>
         <Grid>
           <Grid.Column width={16}>
@@ -65,13 +66,16 @@ class Contact extends React.Component {
                   onChange={this.handleChange}
                 >
                 </Form.TextArea>
-                  <Button inverted color='black' style={{ width: '100px' }} onClick={this.handleSubmit} >
+                  <Form.Button inverted color='black' style={{ width: '100px' }} onClick={this.handleSubmit} floated='right'>
                     Send email
-                  </Button>
+                  </Form.Button>
               </Form>
             </Container>
           </Grid.Column>
         </Grid>
+          <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
+          <Footer />
+          </Container>
       </Fragment>
     )
   }
