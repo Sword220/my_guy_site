@@ -91,9 +91,9 @@ class Contact extends React.Component {
                     onClick={this.handleSubmit} 
                     floated='right'
                     disabled = {
-                      !this.state.name ||
-                      !this.state.email ||
-                      !this.state.body
+                      !name ||
+                      !email ||
+                      !body
                     }>
                     Send email
                   </Form.Button>
