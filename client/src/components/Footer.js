@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import {
   Container,
   Menu,
-  Icon,
 } from 'semantic-ui-react'
 import styled from 'styled-components'
 

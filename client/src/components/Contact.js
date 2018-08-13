@@ -4,7 +4,6 @@ import {
   Header, 
   Container,
   Form,
-  Button,
   Grid,
 } from 'semantic-ui-react'
 import styled from 'styled-components'

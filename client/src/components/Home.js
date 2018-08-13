@@ -27,8 +27,16 @@ const HeaderStyle = styled.h1`
   margin-top: 40px;
 `
 
-const FooterStyle = styled.footer`
-    padding-top: 35px;
+const YourStyle = styled.div`
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+    font-size: 70px;
+`
+
+const ParaStyle = styled.div`
+    padding-top: 25px;
+    font-size: 35px;
 `
 
 class Home extends React.Component {
@@ -38,25 +46,24 @@ class Home extends React.Component {
     this.setState({ imageSpin: !this.state.ImageSpin })
   }
 
-  fastSpin = () => {
-    const { imageSpin } = this.state
-    if(imageSpin){
-      return(
-        <Image src={MyGuy} style={{ padding: '60px' }} circular pointing='true' secondary='true' />
-      )
-    }
-  }
-
   render() {
     return (
       <Fragment>
         <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
-          <Header as={HeaderStyle} style={{ paddingTop: '40px' }}>Who's Your Guy?</Header>
+          <Header as={HeaderStyle} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+          <ParaStyle>
+            <p>Who's</p> 
+          </ParaStyle>
+          <YourStyle>
+            <p>Your</p> 
+          </YourStyle>
+          <ParaStyle>
+            <p>Guy?</p>
+          </ParaStyle>
+          </Header>
           <Image src={MyGuy} as={Rotate} style={{ padding: '60px' }} circular pointing='true' secondary='true' onClick={this.imageClick} /> 
         </Container>
-        <FooterStyle>
-          <Footer /> 
-        </FooterStyle>
+        <Footer />
       </Fragment>
     );
   }
