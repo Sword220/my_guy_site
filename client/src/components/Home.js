@@ -27,6 +27,10 @@ const HeaderStyle = styled.h1`
   margin: 40px 0px 0px 0px;
 `
 
+const FooterStyle = styled.footer`
+    padding-top: 35px;
+`
+
 
 class Home extends React.Component {
   state = { imageSpin: false }
@@ -51,9 +55,9 @@ class Home extends React.Component {
           <Header as={HeaderStyle} style={{ padding: '40px 0px 0px 0px' }}>Who's Your Guy?</Header>
             <Image src={MyGuy} as={Rotate} style={{ padding: '60px' }} circular pointing='true' secondary='true' onClick={this.imageClick} /> 
         </Container>
-        <Container>
-        <Footer /> 
-        </Container>
+        <FooterStyle>
+          <Footer /> 
+        </FooterStyle>
       </Fragment>
     );
   }
