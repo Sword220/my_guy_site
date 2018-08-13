@@ -10,6 +10,12 @@ import {
   Icon,
 } from 'semantic-ui-react'
 import InfiniteScroll from 'react-infinite-scroller'
+import styled from 'styled-components'
+import Footer from './Footer'
+
+const ReviewFooter = styled.footer`
+  padding-bottom: 75px;
+`
 
 class Reviews extends React.Component {
   state = { reviews : [], name: '', body: '', moreReviews: false }
@@ -58,6 +64,9 @@ class Reviews extends React.Component {
               <Button style={{ padding: '15px', margin: '10px' }} color='facebook' href='https://www.facebook.com/pg/cameron801/reviews/?ref=page_internal' >
                 <Icon name='facebook' /> Leave a Review on Facebook
               </Button>
+            <ReviewFooter>
+              <Footer />
+            </ReviewFooter>
           </Container>
         </Grid.Column>
       </Grid>

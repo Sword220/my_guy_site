@@ -24,13 +24,12 @@ const Rotate = styled.div`
 const HeaderStyle = styled.h1`
   text-align: center;
   color: white !important;
-  margin: 40px 0px 0px 0px;
+  margin-top: 40px;
 `
 
 const FooterStyle = styled.footer`
     padding-top: 35px;
 `
-
 
 class Home extends React.Component {
   state = { imageSpin: false }
@@ -52,8 +51,8 @@ class Home extends React.Component {
     return (
       <Fragment>
         <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
-          <Header as={HeaderStyle} style={{ padding: '40px 0px 0px 0px' }}>Who's Your Guy?</Header>
-            <Image src={MyGuy} as={Rotate} style={{ padding: '60px' }} circular pointing='true' secondary='true' onClick={this.imageClick} /> 
+          <Header as={HeaderStyle} style={{ paddingTop: '40px' }}>Who's Your Guy?</Header>
+          <Image src={MyGuy} as={Rotate} style={{ padding: '60px' }} circular pointing='true' secondary='true' onClick={this.imageClick} /> 
         </Container>
         <FooterStyle>
           <Footer /> 
