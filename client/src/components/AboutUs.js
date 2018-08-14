@@ -4,6 +4,7 @@ import {
   Container,
   Image,
   Grid,
+  Responsive,
 } from 'semantic-ui-react'
 import styled from 'styled-components'
 import Footer from './Footer'
@@ -45,6 +46,7 @@ class About extends React.Component {
             About Us
           </Header>
         </HeaderStyle>
+        <Responsive minWidth={768}>
         <Grid columm={2}>
           <Grid.Column width={8} floated='left'>
             <ImageStyle>
@@ -64,6 +66,18 @@ class About extends React.Component {
             </AboutUsStyle>
           </Grid.Column>
         </Grid>
+        </Responsive>
+        <Responsive maxWidth={768}>
+          <Grid column={1}>
+            <Grid.Row>
+              <Image src={ThumbsUp} />
+            </Grid.Row>
+            <Grid.Row>
+              My Guy Drain Solutions is an owner operated company based around helping other.<br />
+              Our customer service is second to none.
+            </Grid.Row>
+          </Grid>
+        </Responsive>
         <AboutFooter>
           <Footer />
         </AboutFooter>
