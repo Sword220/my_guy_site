@@ -11,7 +11,7 @@ import NoMatch from './components/NoMatch'
 import Img from './images/MyGuy_Background.jpg'
 
 const Main = styled.div`
-  height: 100vh;
+  height: 1500px;
   background-image: url(${Img});
   background-repeat: no-repeat;
   background-position: center;
