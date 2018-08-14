@@ -5,6 +5,7 @@ import {
   Container,
   Form,
   Grid,
+  Responsive,
 } from 'semantic-ui-react'
 import styled from 'styled-components'
 import Footer from './Footer'
@@ -50,9 +51,16 @@ class Contact extends React.Component {
 
     return(
       <Fragment>
-      <Header style={{ color: 'white', paddingTop: '40px' }} as='h1' textAlign='center' >
-        <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
-      </Header>
+      <Responsive minWidth={768}>
+        <Header style={{ color: 'white', paddingTop: '40px' }} as='h1' textAlign='center' >
+          <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
+        </Header>
+      </Responsive>
+      <Responsive maxWidth={768}>
+        <Header style={{ color: 'white', paddingTop: '40px' }} as='h2' textAlign='center' >
+          <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
+        </Header>
+      </Responsive>
         <Grid>
           <Grid.Column width={16}>
             <Container style={{ width: '800px', padding: '30px', display: 'flex', justifyContent: 'center' }} fluid>
