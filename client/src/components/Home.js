@@ -28,8 +28,8 @@ const HeaderStyle = styled.h1`
 `
 
 const YourStyle = styled.div`
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 0px;
     font-size: 70px;
 `
