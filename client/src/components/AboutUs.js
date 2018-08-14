@@ -56,11 +56,11 @@ class About extends React.Component {
           <Grid.Column width={8} floated='right'>
             <AboutUsStyle>
               <Container as='h2' fluid >
-                My Guy Drain Solutions is an owner operated company based around helping others. <br />
-                Our customer service is second to none. We are in the people business, but we can fix your drain too!<br /> 
-                We never up sale or offer solutions that don’t fit your wants and needs. With almost two decades of experience,<br /> 
-                serving Weber and Davis County, we can find a solution for all your drain needs. We look forward to the<br /> 
-                opportunity to show you how our “help first” attitude can turn a stressful situation into an enjoyable experience.<br />
+                My Guy Drain Solutions is an owner operated company based around helping others. Our customer service is second<br /> 
+                to none. We are in the people business, but we can fix your drain too! We never up sale or offer solutions that<br /> 
+                don’t fit your wants and needs. With almost two decades of experience, serving Weber and Davis County, we can find<br />
+                a solution for all your drain needs. We look forward to the opportunity to show you how our “help first” attitude<br /> 
+                can turn a stressful situation into an enjoyable experience.<br />
                 We look forward to being your guy!
               </Container>
             </AboutUsStyle>
@@ -68,14 +68,20 @@ class About extends React.Component {
         </Grid>
         </Responsive>
         <Responsive maxWidth={768}>
-          <Grid column={1}>
-            <Grid.Row>
-              <Image src={ThumbsUp} />
-            </Grid.Row>
-            <Grid.Row>
-              My Guy Drain Solutions is an owner operated company based around helping other.<br />
-              Our customer service is second to none.
-            </Grid.Row>
+          <Grid column={1} row={2}>
+            <Grid.Column>
+              <Grid.Row>
+                <Image src={ThumbsUp} />
+              </Grid.Row>
+              <Grid.Row style={{ paddingTop: '20px'}}>
+                My Guy Drain Solutions is an owner operated company based around helping others. Our customer service is second to none.
+                We are in the people business, but we can fix your drains too!  We never up sale or offer solutions that don't fit your
+                wants and needs.  With almost two decades of experience, serving Weber and Davis Counties, we can find a solution for all
+                your drain needs.  We look forward to the opportunituy to show you how our "help first" attitude can turn a stressful
+                situation into an enjoyable experience.<br />
+                We look forward to being your guy!
+              </Grid.Row>
+            </Grid.Column>
           </Grid>
         </Responsive>
         <AboutFooter>
