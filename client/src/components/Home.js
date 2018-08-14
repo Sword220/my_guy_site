@@ -3,6 +3,7 @@ import {
   Header, 
   Container, 
   Image, 
+  Responsive,
 } from 'semantic-ui-react';
 import styled, { keyframes } from 'styled-components'
 import MyGuy from '../images/MyGuyDrainLogo.jpg'
@@ -27,11 +28,18 @@ const HeaderStyle = styled.h1`
   margin-top: 40px;
 `
 
+const ResponsiveHeader = styled.h2`
+    test-align: center;
+    color: white !important;
+    margin-top: 40px;
+`
+
 const YourStyle = styled.div`
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 0px;
     font-size: 70px;
+    font-weight: bold;
 `
 
 const ParaStyle = styled.div`
@@ -50,6 +58,7 @@ class Home extends React.Component {
     return (
       <Fragment>
         <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
+          <Responsive maxWidth={768}>
           <Header as={HeaderStyle} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
           <ParaStyle>
             <p>Who's</p> 
@@ -61,6 +70,20 @@ class Home extends React.Component {
             <p>Guy?</p>
           </ParaStyle>
           </Header>
+          </Responsive>
+          <Responsive minWidth={768}>
+          <Header as={ResponsiveHeader} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+          <ParaStyle>
+            <p>Who's</p> 
+          </ParaStyle>
+          <YourStyle>
+            <p>Your</p> 
+          </YourStyle>
+          <ParaStyle>
+            <p>Guy?</p>
+          </ParaStyle>
+          </Header>
+          </Responsive>
           <Image src={MyGuy} as={Rotate} style={{ padding: '60px' }} circular pointing='true' secondary='true' onClick={this.imageClick} /> 
         </Container>
         <Footer />

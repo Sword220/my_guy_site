@@ -12,7 +12,7 @@ const FooterStyle = styled.footer`
   align-items: center;
   justify-content: stretch;
   flex-direction: row;
-  height: 20vh
+  height: 20vh;
   padding: 0px 0px 0px 125px;
 `
 

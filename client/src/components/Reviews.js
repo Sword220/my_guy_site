@@ -61,7 +61,7 @@ class Reviews extends React.Component {
                 </InfiniteScroll>
               </div>
               </Container>
-              <Button style={{ padding: '15px', margin: '10px' }} color='facebook' href='https://www.facebook.com/pg/cameron801/reviews/?ref=page_internal' >
+              <Button style={{ padding: '15px 15px 10px 15px', margin: '10px' }} color='facebook' href='https://www.facebook.com/pg/cameron801/reviews/?ref=page_internal' >
                 <Icon name='facebook' /> Leave a Review on Facebook
               </Button>
             <ReviewFooter>
