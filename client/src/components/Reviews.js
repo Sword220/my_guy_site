@@ -37,39 +37,39 @@ class Reviews extends React.Component {
 
     return(
       <Fragment>
-      <Grid>
-        <Grid.Column width={16}>
-          <Container fluid style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', color: 'white', padding: '50px' }}>
-            <Header style={{ color: 'white' }} as='h1' textAlign='center'>
-              Reviews
-            </Header>
-            <Container fluid>
-              <div style={{ display: 'flex', justifyContent: 'center', background: 'black', height: '500px', overflow: 'auto', border: '2px solid grey' }}>
-                <InfiniteScroll hasMore={false} loadMore={() => this.loadReviews()} pageStart={0}>
-                  <div>
-                    {reviews.map ( r => 
-                    <div key={r.id} style={{ padding: '20px' }}>
-                      <Header style={{ color: 'white' }} as='h3'>{r.name}</Header>
-                      <Rating icon='star' size='tiny' defaultRating={5} maxRating={5} />
-                      <Divider />
+        <Grid>
+          <Grid.Column width={16}>
+            <Container fluid style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', color: 'white', padding: '50px' }}>
+              <Header style={{ color: 'white' }} as='h1' textAlign='center'>
+                Reviews
+              </Header>
+              <Container fluid>
+                <div style={{ display: 'flex', justifyContent: 'center', background: 'black', height: '500px', overflow: 'auto', border: '2px solid grey' }}>
+                  <InfiniteScroll hasMore={false} loadMore={() => this.loadReviews()} pageStart={0}>
+                    <div>
+                      {reviews.map ( r => 
+                      <div key={r.id} style={{ padding: '20px' }}>
+                        <Header style={{ color: 'white' }} as='h3'>{r.name}</Header>
+                        <Rating icon='star' size='tiny' defaultRating={5} maxRating={5} />
+                        <Divider />
                         <p>{r.body}</p>
-                      <hr />
+                        <hr />
+                      </div>
+                      )}
+                      <p></p>
                     </div>
-                    )}
-                    <p></p>
-                  </div>
-                </InfiniteScroll>
-              </div>
+                  </InfiniteScroll>
+                </div>
               </Container>
               <Button style={{ padding: '15px 15px 10px 15px', margin: '10px' }} color='facebook' href='https://www.facebook.com/pg/cameron801/reviews/?ref=page_internal' >
                 <Icon name='facebook' /> Leave a Review on Facebook
               </Button>
-            <ReviewFooter>
-              <Footer />
-            </ReviewFooter>
-          </Container>
-        </Grid.Column>
-      </Grid>
+              <ReviewFooter>
+                <Footer />
+              </ReviewFooter>
+            </Container>
+          </Grid.Column>
+        </Grid>
       </Fragment>
     )
   }

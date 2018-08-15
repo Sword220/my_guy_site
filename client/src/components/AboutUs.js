@@ -47,25 +47,25 @@ class About extends React.Component {
           </Header>
         </HeaderStyle>
         <Responsive minWidth={768}>
-        <Grid columm={2}>
-          <Grid.Column width={8} floated='left'>
-            <ImageStyle>
-              <Image src={ThumbsUp} />
-            </ImageStyle>
-          </Grid.Column>
-          <Grid.Column width={8} floated='right'>
-            <AboutUsStyle>
-              <Container as='h2' fluid >
-                My Guy Drain Solutions is an owner operated company based around helping others. Our customer service is second<br /> 
-                to none. We are in the people business, but we can fix your drain too! We never up sale or offer solutions that<br /> 
-                don’t fit your wants and needs. With almost two decades of experience, serving Weber and Davis County, we can find<br />
-                a solution for all your drain needs. We look forward to the opportunity to show you how our “help first” attitude<br /> 
-                can turn a stressful situation into an enjoyable experience.<br />
-                We look forward to being your guy!
-              </Container>
-            </AboutUsStyle>
-          </Grid.Column>
-        </Grid>
+          <Grid columm={2}>
+            <Grid.Column width={8} floated='left'>
+              <ImageStyle>
+                <Image src={ThumbsUp} />
+              </ImageStyle>
+            </Grid.Column>
+            <Grid.Column width={8} floated='right'>
+              <AboutUsStyle>
+                <Container as='h2' fluid >
+                  My Guy Drain Solutions is an owner operated company based around helping others. Our customer service is second<br /> 
+                  to none. We are in the people business, but we can fix your drain too! We never up sale or offer solutions that<br /> 
+                  don’t fit your wants and needs. With almost two decades of experience, serving Weber and Davis County, we can find<br />
+                  a solution for all your drain needs. We look forward to the opportunity to show you how our “help first” attitude<br /> 
+                  can turn a stressful situation into an enjoyable experience.<br />
+                  We look forward to being your guy!
+                </Container>
+              </AboutUsStyle>
+            </Grid.Column>
+          </Grid>
         </Responsive>
         <Responsive maxWidth={768}>
           <Grid column={1} row={2}>

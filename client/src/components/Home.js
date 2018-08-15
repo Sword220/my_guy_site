@@ -4,7 +4,7 @@ import {
   Container, 
   Image, 
   Responsive,
-} from 'semantic-ui-react';
+} from 'semantic-ui-react'
 import styled, { keyframes } from 'styled-components'
 import MyGuy from '../images/MyGuyDrainLogo.jpg'
 import Footer from './Footer'
@@ -19,7 +19,7 @@ const rotate360 = keyframes`
 `
 
 const Rotate = styled.div`
-  animation: ${rotate360} 30s linear;
+  animation: ${rotate360} 30s linear infinite;
 `
 
 const HeaderStyle = styled.h1`
@@ -28,7 +28,7 @@ const HeaderStyle = styled.h1`
   margin-top: 40px;
 `
 
-const ResponsiveHeader = styled.h2`
+const ResponsiveHeader = styled.h3`
     test-align: center;
     color: white !important;
     margin-top: 40px;
@@ -59,30 +59,30 @@ class Home extends React.Component {
       <Fragment>
         <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
           <Responsive maxWidth={768}>
-          <Header as={HeaderStyle} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
-          <ParaStyle>
-            <p>Who's</p> 
-          </ParaStyle>
-          <YourStyle>
-            <p>Your</p> 
-          </YourStyle>
-          <ParaStyle>
-            <p>Guy?</p>
-          </ParaStyle>
-          </Header>
+            <Header as={HeaderStyle} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+              <ParaStyle>
+                <p>Who's</p> 
+              </ParaStyle>
+              <YourStyle>
+                <p>Your</p> 
+              </YourStyle>
+              <ParaStyle>
+                <p>Guy?</p>
+              </ParaStyle>
+            </Header>
           </Responsive>
           <Responsive minWidth={768}>
-          <Header as={ResponsiveHeader} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
-          <ParaStyle>
-            <p>Who's</p> 
-          </ParaStyle>
-          <YourStyle>
-            <p>Your</p> 
-          </YourStyle>
-          <ParaStyle>
-            <p>Guy?</p>
-          </ParaStyle>
-          </Header>
+            <Header as={ResponsiveHeader} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+              <ParaStyle>
+                <p>Who's</p> 
+              </ParaStyle>
+              <YourStyle>
+                <p>Your</p> 
+              </YourStyle>
+              <ParaStyle>
+                <p>Guy?</p>
+              </ParaStyle>
+            </Header>
           </Responsive>
           <Image src={MyGuy} as={Rotate} style={{ padding: '60px' }} circular pointing='true' secondary='true' onClick={this.imageClick} /> 
         </Container>

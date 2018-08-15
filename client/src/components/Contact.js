@@ -23,7 +23,6 @@ const FormStyle = styled.div`
 `
 
 class Contact extends React.Component {
-
   state = { name: '', email: '', phone: '', body: '' }
 
   handleChange = (e) => {
@@ -51,16 +50,16 @@ class Contact extends React.Component {
 
     return(
       <Fragment>
-      <Responsive minWidth={768}>
-        <Header style={{ color: 'white', paddingTop: '40px' }} as='h1' textAlign='center' >
-          <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
-        </Header>
-      </Responsive>
-      <Responsive maxWidth={768}>
-        <Header style={{ color: 'white', paddingTop: '40px' }} as='h2' textAlign='center' >
-          <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
-        </Header>
-      </Responsive>
+        <Responsive minWidth={768}>
+          <Header style={{ color: 'white', paddingTop: '40px' }} as='h1' textAlign='center' >
+            <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
+          </Header>
+        </Responsive>
+        <Responsive maxWidth={768}>
+          <Header style={{ color: 'white', paddingTop: '40px' }} as='h4' textAlign='center' >
+            <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
+          </Header>
+        </Responsive>
         <Grid>
           <Grid.Column width={16}>
             <Container style={{ width: '800px', padding: '30px', display: 'flex', justifyContent: 'center' }} fluid>
@@ -103,9 +102,9 @@ class Contact extends React.Component {
                   >
                     Send email
                   </Form.Button>
-                  </Form>
-                </FormStyle>
-              </Container>
+                </Form>
+              </FormStyle>
+            </Container>
           </Grid.Column>
         </Grid>
         <ContactFooter>
