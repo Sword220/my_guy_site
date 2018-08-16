@@ -19,7 +19,7 @@ const Main = styled.div`
   width: 100vw;
   color: white !important;
   font-family: Verdana, Geneva, sans-serif !important;
-  `
+`
 
 class App extends React.Component {
   

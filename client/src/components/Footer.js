@@ -35,7 +35,7 @@ class Footer extends React.Component {
         </Responsive>
         <Responsive maxWidth={768} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Menu style={{ fontSize: '15px' }} pointing secondary vertical>
-            <Menu.Item style={{ color: 'white' }} name='phone' content='385-264-3353' />
+            <Menu.Item href='tel:13852643353' style={{ color: 'white' }} name='phone' content='385-264-3353' />
             <Link to ='/contact'>
               <Menu.Item style={{ color: 'white' }} name='email' content='myguydrainsolutions@gmail.com' />
             </Link>
