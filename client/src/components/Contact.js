@@ -11,7 +11,7 @@ import styled from 'styled-components'
 import Footer from './Footer'
 
 const ContactFooter = styled.footer`
-  padding-top: 115px !important;
+  padding-top: 150px !important;
 `
 
 const FormStyle = styled.div`
@@ -88,6 +88,7 @@ class Contact extends React.Component {
                   <Form.TextArea 
                     style={{ height: '100px' }}
                     required
+                    placeholder='Message...'
                     name="body"
                     value={body} 
                     onChange={this.handleChange}
