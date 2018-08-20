@@ -56,11 +56,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  address: 'smtp.sendgrid.net',  
+  address: 'smtp.gmail.com',  
   port: 587,
   domain: 'myguydrainsolutions.com',
-  user_name: ENV['SENDGRID_USERNAME'],
-  password: ENV['SENDGRID_PASSWORD'],
+  user_name: ENV['MAIL_LOGIN'],
+  password: ENV['MAIL_PASSWORD'],
   authentication: 'plain',
   enable_starttls_auto: true
   }
