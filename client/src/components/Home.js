@@ -45,6 +45,7 @@ const YourStyle = styled.div`
 const ParaStyle = styled.div`
     padding-top: 25px;
     font-size: 35px;
+    font-weight: lighter;
 `
 
 class Home extends React.Component {

@@ -15,7 +15,6 @@ const Main = styled.div`
   background-image: url(${Img});
   background-repeat: no-repeat;
   background-position: center;
-  
   width: 100vw;
   color: white !important;
   font-family: Verdana, Geneva, sans-serif !important;

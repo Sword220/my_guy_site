@@ -22,6 +22,14 @@ const FormStyle = styled.div`
   padding-top: 40px;
 `
 
+const ContainerStyle = styled.div`
+  width: 800px; 
+  padding: 30px; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+`
+
 class Contact extends React.Component {
   state = { name: '', email: '', phone: '', body: '' }
 
@@ -33,9 +41,10 @@ class Contact extends React.Component {
   handleSubmit = (e) => {
   e.preventDefault()
     const { email, name, body } = this.state
+    const regex = new RegExp(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i)
 
     if (email === '' || name === '' || body === '') {
-      alert('You need to enter a name, valid email, and reason for your meassage before you can send an email.')
+      alert('You need to enter a name, valid email, and reason for your message before you can send an email.')
     } else {
       axios.post('/api/contacts', this.state)
         .then( res => {
@@ -56,17 +65,18 @@ class Contact extends React.Component {
           </Header>
         </Responsive>
         <Responsive maxWidth={768}>
-          <Header style={{ color: 'white', paddingTop: '40px' }} as='h4' textAlign='center' >
+          <Header style={{ color: 'white', paddingTop: '40px' }} as='h6' textAlign='center' >
             <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
           </Header>
         </Responsive>
         <Grid>
           <Grid.Column width={16}>
-            <Container style={{ width: '800px', padding: '30px', display: 'flex', justifyContent: 'center' }} fluid>
+            <Container style={{ display: 'flex', justifyContent: 'center', padding: '30px' }} fluid>
               <FormStyle>
-                <Form onSubmit={this.handleSubmit}>
+                <Form>
                   <Form.Input
                     required
+                    autoFocus={"true"}
                     placeholder="Name"
                     name="name"
                     value={name}

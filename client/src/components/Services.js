@@ -31,7 +31,7 @@ class Services extends React.Component {
                       <div style={{ padding: '20px' }}>
                         <Header style={{ color: 'white' }} as='h3'>Kitchen Sink</Header>
                         <Divider />
-                          <p>Are you experienceing water flowing from one side of your sink to the other, or have stinky food smells coming from your sink?</p>
+                          <p>Are you experiencing water flowing from one side of your sink to the other, or have stinky food smells coming from your sink?</p>
                           <p>My Guy has a Solution!</p>
                         <hr />
                       </div>
@@ -75,7 +75,7 @@ class Services extends React.Component {
                       <div style={{ padding: '20px' }}>
                         <Header style={{ color: 'white' }} as='h3'>Floor Drain</Header>
                         <Divider />
-                          <p>Take a ptcher of water and test your floor drains.  If you are experiencing poolin or if it drians slow.</p>
+                          <p>Take a pitcher of water and test your floor drains.  If you are experiencing pooling or if it drains slow.</p>
                           <p>My Guy has a Solution!</p>
                           <p>* Defective floor drains could cause thousands of dollars in repairs to your home.  Don't wait until it's too late.</p>
                         <hr />
