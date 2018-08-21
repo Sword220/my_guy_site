@@ -11,11 +11,11 @@ import NoMatch from './components/NoMatch'
 import Img from './images/MyGuy_Background.jpg'
 
 const Main = styled.div`
-  height: 1500px;
+  height: 900px;
   background-image: url(${Img});
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  
   width: 100vw;
   color: white !important;
   font-family: Verdana, Geneva, sans-serif !important;

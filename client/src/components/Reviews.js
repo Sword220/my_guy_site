@@ -14,7 +14,7 @@ import styled from 'styled-components'
 import Footer from './Footer'
 
 const ReviewFooter = styled.footer`
-  padding-bottom: 75px;
+  padding-top: 50px;
 `
 
 class Reviews extends React.Component {
@@ -44,7 +44,7 @@ class Reviews extends React.Component {
                 Reviews
               </Header>
               <Container fluid>
-                <div style={{ display: 'flex', justifyContent: 'center', background: 'black', height: '500px', overflow: 'auto', border: '2px solid grey' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', background: 'black', height: '450px', overflow: 'auto', border: '2px solid grey' }}>
                   <InfiniteScroll hasMore={false} loadMore={() => this.loadReviews()} pageStart={0}>
                     <div>
                       {reviews.map ( r => 
