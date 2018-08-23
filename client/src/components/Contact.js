@@ -22,14 +22,6 @@ const FormStyle = styled.div`
   padding-top: 40px;
 `
 
-const ContainerStyle = styled.div`
-  width: 800px; 
-  padding: 30px; 
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-`
-
 class Contact extends React.Component {
   state = { name: '', email: '', phone: '', body: '' }
 
@@ -41,7 +33,7 @@ class Contact extends React.Component {
   handleSubmit = (e) => {
   e.preventDefault()
     const { email, name, body } = this.state
-    const regex = new RegExp(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i)
+    //const regex = new RegExp(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i)
 
     if (email === '' || name === '' || body === '') {
       alert('You need to enter a name, valid email, and reason for your message before you can send an email.')
