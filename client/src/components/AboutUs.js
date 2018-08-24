@@ -17,6 +17,7 @@ const AboutFooter = styled.footer`
 const HeaderStyle = styled.h1`
   padding-top: 40px;
   text-align: center;
+  font-family: futura;
 `
 
 const ImageStyle = styled.div`
@@ -34,6 +35,7 @@ const AboutUsStyle = styled.div`
   align-items: center;
   padding-top: 60px;
   padding-right: 200px;
+  font-family: futura !important;
 `
 
 class About extends React.Component {
@@ -42,7 +44,7 @@ class About extends React.Component {
     return(
       <Fragment>
         <HeaderStyle>
-          <Header style={{ color: 'white' }}>
+          <Header style={{ color: 'white', fontFamily: 'futura' }}>
             About Us
           </Header>
         </HeaderStyle>

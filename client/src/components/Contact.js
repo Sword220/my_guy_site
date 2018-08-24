@@ -11,7 +11,7 @@ import styled from 'styled-components'
 import Footer from './Footer'
 
 const ContactFooter = styled.footer`
-  padding-top: 150px !important;
+  padding-top: 160px !important;
 `
 
 const FormStyle = styled.div`
@@ -20,6 +20,19 @@ const FormStyle = styled.div`
   justify-content: space-around;
   flex-direction: column;
   padding-top: 40px;
+`
+const YourStyle = styled.div`
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    font-size: 70px;
+    font-weight: extra-bold;
+`
+
+const ParaStyle = styled.div`
+    padding-top: 25px;
+    font-size: 40px;
+    font-weight: light;
 `
 
 class Contact extends React.Component {
@@ -52,18 +65,65 @@ class Contact extends React.Component {
     return(
       <Fragment>
         <Responsive minWidth={768}>
-          <Header style={{ color: 'white', paddingTop: '40px' }} as='h1' textAlign='center' >
-            <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
+          <Header 
+            style={{ 
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white', 
+              paddingTop: '40px', 
+              fontFamily: 'futura', 
+            }} 
+            as='h1' 
+            textAlign='center' 
+          >
+            <ParaStyle>
+              <p>I'm</p>
+            </ParaStyle>
+            <YourStyle>
+              <p>Your</p>
+            </YourStyle>
+            <ParaStyle>
+              <p>Guy!</p>
+            </ParaStyle>
           </Header>
         </Responsive>
         <Responsive maxWidth={768}>
-          <Header style={{ color: 'white', paddingTop: '40px' }} as='h6' textAlign='center' >
-            <p>Phone:  385-264-3353  |  Email: myguydrainsolutions@gmail.com</p>
+          <Header 
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center', 
+              color: 'white', 
+              paddingTop: '40px', 
+            }} 
+            as='h6' 
+            textAlign='center' 
+          >
+            <ParaStyle>
+              <p>I'm</p>
+            </ParaStyle>
+            <YourStyle>
+              <p>Your</p>
+            </YourStyle>
+            <ParaStyle>
+              <p>Guy!</p>
+            </ParaStyle>
           </Header>
         </Responsive>
         <Grid>
           <Grid.Column width={16}>
-            <Container style={{ display: 'flex', justifyContent: 'center', padding: '30px' }} fluid>
+            <Container 
+              style={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                padding: '30px', 
+                fontFamily: 'futura', 
+              }} 
+              fluid
+            >
               <FormStyle>
                 <Form>
                   <Form.Input
@@ -97,13 +157,13 @@ class Contact extends React.Component {
                   >
                   </Form.TextArea>
                   <Form.Button 
+                    style={{ width: '100px', height: '50px'}} 
                     inverted 
-                    color='black' 
-                    style={{ width: '100px' }} 
-                    onClick={this.handleSubmit} 
                     floated='right'
+                    color='black' 
+                    onClick={this.handleSubmit} 
                   >
-                    Send email
+                    Send
                   </Form.Button>
                 </Form>
               </FormStyle>

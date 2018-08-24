@@ -7,14 +7,6 @@ import {
   Button,
   Icon,
 } from 'semantic-ui-react'
-import styled from 'styled-components'
-
-const Nav = styled.div`
-  background-color: black;
-  color: white !important;
-  display: flex;
-  justify-content: stretch;
-`
 
 class NavBar extends React.Component {
   state = { showMenu: false }
@@ -27,21 +19,46 @@ class NavBar extends React.Component {
     const { showMenu } = this.state
     if(showMenu) {
       return(
-        <Menu style={{ fontSize: '1 em', display: 'flex', justifyContent: 'space-evenly' }} pointing secondary vertical>
+        <Menu 
+          style={{ 
+            fontSize: '1 em', 
+            display: 'flex', 
+            justifyContent: 'space-evenly', 
+            fontFamily: 'futura', 
+          }} 
+          pointing 
+          secondary 
+          vertical
+        >
           <Link to='/'>
-            <Menu.Item style={{ color: 'white' }} name='Home' />
+            <Menu.Item 
+              style={{ color: 'white' }} 
+              name='Home' 
+            />
           </Link>
           <Link to='/about'>
-            <Menu.Item style={{ color: 'white' }} name='About us' />
+            <Menu.Item 
+              style={{ color: 'white' }} 
+              name='About us' 
+            />
           </Link>
           <Link to='/reviews'>
-            <Menu.Item style={{ color: 'white' }} name='Reviews' />
+            <Menu.Item 
+              style={{ color: 'white' }} 
+              name='Reviews' 
+            />
           </Link>
           <Link to='/services'>
-            <Menu.Item style={{ color: 'white' }} name='Services' />
+            <Menu.Item 
+              style={{ color: 'white' }} 
+              name='Services' 
+            />
           </Link>
           <Link to='/contact'>
-            <Menu.Item style={{ color: 'white' }} name='Contact Us' />
+            <Menu.Item 
+              style={{ color: 'white' }} 
+              name='Contact Us' 
+            />
           </Link>
         </Menu>
       )
@@ -50,32 +67,65 @@ class NavBar extends React.Component {
 
   render() {
     return(
-      <Nav>
         <Fragment>
-          <Container fluid>
+          <Container 
+            style={{ backgroundColor: 'black' }}
+            fluid
+          >
             <Responsive minWidth={768}>
-              <Menu style={{ fontSize: '20px', display: 'flex', justifyContent: 'space-evenly' }} fluid pointing secondary>
+              <Menu 
+                style={{ 
+                  fontSize: '20px', 
+                  display: 'flex', 
+                  justifyContent: 'space-evenly', 
+                  fontFamily: 'futura', 
+                }} 
+                fluid 
+                pointing 
+                secondary
+              >
                 <Link to='/'>
-                  <Menu.Item style={{ color: 'white' }} name='Home' />
+                  <Menu.Item 
+                    style={{ color: 'white' }} 
+                    name='Home' 
+                  />
                 </Link>
                 <Link to='/about'>
-                  <Menu.Item style={{ color: 'white' }} name='About us' />
+                  <Menu.Item 
+                    style={{ color: 'white' }} 
+                    name='About us' 
+                  />
                 </Link>
                 <Link to='/reviews'>
-                  <Menu.Item style={{ color: 'white' }} name='Reviews' />
+                  <Menu.Item 
+                    style={{ color: 'white' }} 
+                    name='Reviews' 
+                  />
                 </Link>
                 <Link to='/services'>
-                  <Menu.Item style={{ color: 'white' }} name='Services' />
+                  <Menu.Item 
+                    style={{ color: 'white' }} 
+                    name='Services' 
+                  />
                 </Link>
                 <Link to='/contact'>
-                  <Menu.Item style={{ color: 'white' }} name='Contact Us' />
+                  <Menu.Item 
+                    style={{ color: 'white' }} 
+                    name='Contact Us' 
+                  />
                 </Link>
               </Menu>
             </Responsive>
           </Container>
           <Responsive maxWidth={768}>
             <Button.Group>
-              <Button icon inverted color='black' style={{ margin: '10px' }} onClick={() => this.toggleMenu()}>
+              <Button 
+                icon 
+                inverted 
+                color='black' 
+                style={{ margin: '10px' }} 
+                onClick={() => this.toggleMenu()}
+              >
                 <Icon name='bars' />
                 Menu
               </Button>
@@ -85,7 +135,6 @@ class NavBar extends React.Component {
             </Container>
           </Responsive>
         </Fragment>
-      </Nav>
     );
   }
 }

@@ -26,6 +26,7 @@ const HeaderStyle = styled.h1`
   text-align: center;
   color: white !important;
   margin-top: 40px;
+  font-family: futura;
 `
 
 const ResponsiveHeader = styled.h3`
@@ -44,7 +45,7 @@ const YourStyle = styled.div`
 
 const ParaStyle = styled.div`
     padding-top: 25px;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: light;
 `
 
@@ -58,9 +59,25 @@ class Home extends React.Component {
   render() {
     return (
       <Fragment>
-        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} fluid>
+        <Container 
+          style={{ 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            flexDirection: 'column', 
+          }} 
+          fluid
+        >
           <Responsive maxWidth={768}>
-            <Header as={HeaderStyle} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+            <Header 
+              as={HeaderStyle} 
+              style={{ 
+                paddingTop: '20px', 
+                display: 'flex', 
+                justifyContent: 'flex-end', 
+                fontFamily: 'futura', 
+              }}
+            >
               <ParaStyle>
                 <p>Who's</p> 
               </ParaStyle>
@@ -73,7 +90,15 @@ class Home extends React.Component {
             </Header>
           </Responsive>
           <Responsive minWidth={768}>
-            <Header as={ResponsiveHeader} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+            <Header 
+              as={ResponsiveHeader} 
+              style={{ 
+                paddingTop: '20px', 
+                display: 'flex', 
+                justifyContent: 'flex-end', 
+                fontFamily: 'futura', 
+              }}
+            >
               <ParaStyle>
                 <p>Who's</p> 
               </ParaStyle>
@@ -85,7 +110,13 @@ class Home extends React.Component {
               </ParaStyle>
             </Header>
           </Responsive>
-          <Image src={MyGuy} as={Rotate} style={{ padding: '60px' }} circular pointing='true' secondary='true' onClick={this.imageClick} /> 
+          <Image 
+            src={MyGuy} 
+            as={Rotate} 
+            style={{ padding: '60px' }} 
+            circular 
+            onClick={this.imageClick} 
+          /> 
         </Container>
         <Footer />
       </Fragment>
