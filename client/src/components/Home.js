@@ -6,7 +6,7 @@ import {
   Responsive,
 } from 'semantic-ui-react'
 import styled, { keyframes } from 'styled-components'
-import MyGuy from '../images/MyGuyDrainLogo.jpg'
+import MyGuy from '../images/favicon.ico'
 import Footer from './Footer'
 
 const rotate360 = keyframes`

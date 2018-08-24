@@ -4,7 +4,6 @@ import {
   Container,
   Menu,
   Responsive,
-  Icon,
 } from 'semantic-ui-react'
 import styled from 'styled-components'
 

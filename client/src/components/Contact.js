@@ -11,7 +11,7 @@ import styled from 'styled-components'
 import Footer from './Footer'
 
 const ContactFooter = styled.footer`
-  padding-top: 100px !important;
+  padding-top: 110px !important;
 `
 
 const FormStyle = styled.div`
