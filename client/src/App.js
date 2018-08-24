@@ -17,7 +17,8 @@ const Main = styled.div`
   background-position: center;
   width: 100vw;
   color: white !important;
-  font-family: Verdana, Geneva, sans-serif !important;
+  font-family: Futura !important;
+  font-size: 14px;
 `
 
 class App extends React.Component {

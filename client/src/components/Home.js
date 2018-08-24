@@ -39,13 +39,13 @@ const YourStyle = styled.div`
     padding-right: 20px;
     padding-top: 0px;
     font-size: 70px;
-    font-weight: bold;
+    font-weight: extra-bold;
 `
 
 const ParaStyle = styled.div`
     padding-top: 25px;
     font-size: 35px;
-    font-weight: lighter;
+    font-weight: light;
 `
 
 class Home extends React.Component {

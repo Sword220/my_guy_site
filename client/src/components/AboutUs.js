@@ -21,11 +21,11 @@ const HeaderStyle = styled.h1`
 
 const ImageStyle = styled.div`
   height: 500px;
-  width: 400px;
+  width: 500px;
   display: flex;
   justify-content: center;
   padding-top: 30px;
-  padding-left: 75px;
+  padding-left: 150px;
 `
 
 const AboutUsStyle = styled.div`
@@ -56,11 +56,11 @@ class About extends React.Component {
             <Grid.Column width={8} floated='right'>
               <AboutUsStyle>
                 <Container as='h2' fluid >
-                  My Guy Drain Solutions is an owner operated company based around helping others. Our customer service is second<br /> 
-                  to none. We are in the people business, but we can fix your drain too! We never up sale or offer solutions that<br /> 
-                  don’t fit your wants and needs. With almost two decades of experience, serving Weber and Davis County, we can find<br />
-                  a solution for all your drain needs. We look forward to the opportunity to show you how our “help first” attitude<br /> 
-                  can turn a stressful situation into an enjoyable experience.<br />
+                  My Guy Drain Solutions is an owner operated company based around helping others. Our customer service is second to none.<br />
+                  We are in the people business, but we can fix your drain too! We never up sale or offer solutions that don’t fit your wants and needs.<br /> 
+                  With almost two decades of experience, serving Weber and Davis County, we can find a solution for all your drain needs. We look forward to the opportunity to show you<br /> 
+                  how our “help first” attitude can turn a stressful situation into an enjoyable experience.<br />
+                  <br />
                   We look forward to being your guy!
                 </Container>
               </AboutUsStyle>
