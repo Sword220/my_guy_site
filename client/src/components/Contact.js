@@ -11,7 +11,7 @@ import styled from 'styled-components'
 import Footer from './Footer'
 
 const ContactFooter = styled.footer`
-  padding-top: 160px !important;
+  padding-top: 100px !important;
 `
 
 const FormStyle = styled.div`
@@ -72,7 +72,7 @@ class Contact extends React.Component {
               alignItems: 'center',
               justifyContent: 'center',
               color: 'white', 
-              paddingTop: '40px', 
+              paddingTop: '20px', 
               fontFamily: 'futura', 
             }} 
             as='h1' 
@@ -97,7 +97,8 @@ class Contact extends React.Component {
               alignItems: 'center',
               justifyContent: 'center', 
               color: 'white', 
-              paddingTop: '40px', 
+              paddingTop: '40px',
+              fontFamily: 'futura', 
             }} 
             as='h6' 
             textAlign='center' 

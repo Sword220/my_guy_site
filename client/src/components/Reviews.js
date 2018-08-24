@@ -14,7 +14,7 @@ import styled from 'styled-components'
 import Footer from './Footer'
 
 const ReviewFooter = styled.footer`
-  padding-top: 45px;
+  padding-top: 40px;
 `
 
 class Reviews extends React.Component {

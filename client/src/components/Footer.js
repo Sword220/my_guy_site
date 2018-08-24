@@ -37,7 +37,11 @@ class Footer extends React.Component {
               >
                 <Link to ='/contact'>
                   <Menu.Item 
-                    style={{ color: 'white', fontFamily: 'futura' }} 
+                    style={{ 
+                      color: 'white', 
+                      fontFamily: 'futura', 
+                      paddingTop: '70px',
+                    }} 
                     name='Send Us A Message' 
                     icon='envelope outline' 
                   />
@@ -52,7 +56,11 @@ class Footer extends React.Component {
                   content='385-264-3353' 
                 />
                 <Menu.Item 
-                  style={{ color: 'white', fontFamily: 'futura' }} 
+                  style={{ 
+                    color: 'white', 
+                    fontFamily: 'futura',
+                    paddingBottom: '55px',
+                  }} 
                   href='https://www.facebook.com/pg/cameron801/' 
                   name='Like Us On Facebook'
                   icon='facebook' 
@@ -83,16 +91,16 @@ class Footer extends React.Component {
             />
             <Link to='/contact'>
               <Menu.Item 
-                style={{ color: 'white' }} 
-                name='email' 
-                content='myguydrainsolutions@gmail.com' 
+                style={{ color: 'white', displayFlex: 'flex', justifyContent: 'flex-start' }}
+                content='Send Us A Message' 
+                icon='envelope outline'
               />
             </Link>
             <Menu.Item 
               style={{ color: 'white' }} 
               href='https://www.facebook.com/pg/cameron801/' 
-              name='facebook' 
-              content='facebook.com/myguy' 
+              name='Like Us On Facebook' 
+              icon='facebook' 
             />
           </Menu>
         </Responsive>

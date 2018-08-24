@@ -11,7 +11,7 @@ import Footer from './Footer'
 import ThumbsUp from '../images/Caricature.jpg'
 
 const AboutFooter = styled.footer`
-  padding-top: 20px;
+  padding-top: 27px;
 `
 
 const HeaderStyle = styled.h1`
