@@ -21,7 +21,7 @@ class NavBar extends React.Component {
       return(
         <Menu 
           style={{ 
-            fontSize: '1 em', 
+            fontSize: '1em', 
             display: 'flex', 
             justifyContent: 'space-evenly', 
             fontFamily: 'futura', 
@@ -75,7 +75,7 @@ class NavBar extends React.Component {
             <Responsive minWidth={768}>
               <Menu 
                 style={{ 
-                  fontSize: '20px', 
+                  fontSize: '20px',
                   display: 'flex', 
                   justifyContent: 'space-evenly', 
                   fontFamily: 'futura', 
@@ -86,7 +86,7 @@ class NavBar extends React.Component {
               >
                 <Link to='/'>
                   <Menu.Item 
-                    style={{ color: 'white' }} 
+                    style={{ color: 'white',  }} 
                     name='Home' 
                   />
                 </Link>

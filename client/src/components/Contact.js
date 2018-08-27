@@ -26,13 +26,13 @@ const YourStyle = styled.div`
     padding-right: 20px;
     padding-top: 0px;
     font-size: 70px;
-    font-weight: extra-bold;
+    font-weight: 700;
 `
 
 const ParaStyle = styled.div`
     padding-top: 25px;
     font-size: 40px;
-    font-weight: light;
+    font-weight: 300;
 `
 
 class Contact extends React.Component {

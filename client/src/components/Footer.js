@@ -13,7 +13,7 @@ const FooterStyle = styled.footer`
   justify-content: stretch;
   flex-direction: row;
   height: 20vh;
-  padding: 0px 0px 0px 125px;
+  padding-left: 117px;
   font-family: futura;
 `
 
