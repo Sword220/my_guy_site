@@ -51,7 +51,7 @@ class Contact extends React.Component {
     const regex = new RegExp(/@./)
     let validMail = regex.test(email)
 
-    if (email !== validMail || name === '' || body === '') {
+    if (email === '' || name === '' || body === '') {
       alert('You need to enter a name, valid email, and reason for your message before you can send an email.')
     } else {
       axios.post('/api/contacts', this.state)
