@@ -25,12 +25,14 @@ const YourStyle = styled.div`
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 0px;
+    font-family: futura, "Trebuthet MS", sans-serif;
     font-size: 70px;
     font-weight: 700;
 `
 
 const ParaStyle = styled.div`
     padding-top: 25px;
+    font-family: futura;
     font-size: 40px;
     font-weight: 300;
 `
@@ -46,9 +48,10 @@ class Contact extends React.Component {
   handleSubmit = (e) => {
   e.preventDefault()
     const { email, name, body } = this.state
-    //const regex = new RegExp(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i)
+    const regex = new RegExp(/@./)
+    let validMail = regex.test(email)
 
-    if (email === '' || name === '' || body === '') {
+    if (email !== validMail || name === '' || body === '') {
       alert('You need to enter a name, valid email, and reason for your message before you can send an email.')
     } else {
       axios.post('/api/contacts', this.state)
@@ -158,7 +161,15 @@ class Contact extends React.Component {
                   >
                   </Form.TextArea>
                   <Form.Button 
-                    style={{ width: '100px', height: '50px'}} 
+                    style={{ 
+                      width: '100px', 
+                      height: '50px',
+                      fontFamily: 'futura',
+                      fontSize: '20px',
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      justifyContent: 'center',
+                    }} 
                     inverted 
                     floated='right'
                     color='black' 

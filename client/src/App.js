@@ -8,17 +8,16 @@ import Contact from './components/Contact'
 import Services from './components/Services'
 import Reviews from './components/Reviews'
 import NoMatch from './components/NoMatch'
-import Img from './images/MyGuy_Background.jpg'
+import Background from './images/MyGuy_Background.jpg'
 
 const Main = styled.div`
-  height: 900px;
-  background-image: url(${Img});
+  background-size: auto;
+  background-image: url(${Background});
   background-repeat: no-repeat;
   background-position: center;
-  width: 100vw;
   color: white !important;
   font-family: Futura !important;
-  font-size: 14px;
+  font-size: 16px;
 `
 
 class App extends React.Component {

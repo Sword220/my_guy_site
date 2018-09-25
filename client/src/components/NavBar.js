@@ -86,7 +86,7 @@ class NavBar extends React.Component {
               >
                 <Link to='/'>
                   <Menu.Item 
-                    style={{ color: 'white',  }} 
+                    style={{ color: 'white' }} 
                     name='Home' 
                   />
                 </Link>

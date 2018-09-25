@@ -18,7 +18,7 @@ const ReviewFooter = styled.footer`
 `
 
 class Reviews extends React.Component {
-  state = { reviews : [], name: '', body: '', moreReviews: false }
+  state = { reviews: [], name: '', body: '', moreReviews: false }
 
   componentDidMount() {
     axios.get('/api/reviews')
@@ -92,7 +92,10 @@ class Reviews extends React.Component {
                 </div>
               </Container>
               <Button 
-                style={{ padding: '15px 15px 10px 15px', margin: '10px' }} 
+                style={{ 
+                  padding: '15px 15px 10px 15px', 
+                  margin: '10px' 
+                }} 
                 href='https://www.facebook.com/pg/cameron801/reviews/?ref=page_internal' 
                 color='facebook' 
               >

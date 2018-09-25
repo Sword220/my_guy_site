@@ -22,29 +22,18 @@ const Rotate = styled.div`
   animation: ${rotate360} 30s linear infinite;
 `
 
-const HeaderStyle = styled.h1`
-  text-align: center;
-  color: white !important;
-  margin-top: 40px;
-  font-family: futura;
-`
-
-const ResponsiveHeader = styled.h3`
-    test-align: center;
-    color: white !important;
-    margin-top: 40px;
-`
-
 const YourStyle = styled.div`
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 0px;
+    font-family: futura !important;
     font-size: 70px;
     font-weight: 700;
 `
 
 const ParaStyle = styled.div`
     padding-top: 25px;
+    font-family: futura !important;
     font-size: 40px;
     font-weight: 300;
 `
@@ -61,6 +50,8 @@ class Home extends React.Component {
       <Fragment>
         <Container 
           style={{ 
+            textAlign: 'center',
+            fontFamily: 'futura',
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
@@ -70,33 +61,34 @@ class Home extends React.Component {
         >
           <Responsive maxWidth={768}>
             <Header 
-              as={HeaderStyle} 
               style={{ 
-                paddingTop: '20px', 
+                paddingTop: '20px',
+                textAlign: 'center', 
                 display: 'flex', 
                 justifyContent: 'flex-end', 
-                fontFamily: 'futura', 
+                fontFamily: 'futura',
+                color: 'white', 
               }}
             >
               <ParaStyle>
-                <p>Who's</p> 
+                <p style={{ fontFamily: 'futura' }}>Who's</p> 
               </ParaStyle>
               <YourStyle>
-                <p>Your</p> 
+                <p style={{ fontFamily: 'futura' }}>Your</p> 
               </YourStyle>
               <ParaStyle>
-                <p>Guy?</p>
+                <p style={{ fontFamily: 'futura' }}>Guy?</p>
               </ParaStyle>
             </Header>
           </Responsive>
           <Responsive minWidth={768}>
             <Header 
-              as={ResponsiveHeader} 
               style={{ 
                 paddingTop: '20px', 
                 display: 'flex', 
                 justifyContent: 'flex-end', 
                 fontFamily: 'futura', 
+                color: 'white',
               }}
             >
               <ParaStyle>
